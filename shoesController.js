@@ -19,9 +19,9 @@ app.controller("addShoesCrtl",function ($scope,$http){
     
     };
 
-    $scope.postdata = function (description, prix) {
+    $scope.postdata = function (nom,prix,description,image) {
 
-        var data = {description: description,prix: prix};
+        var data = {nom:nom,image:image,description: description,prix: prix};
 
        // function ajax angularJs pour poster une nouvelle chaussure
 

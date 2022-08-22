@@ -26,21 +26,53 @@
 
 
             <!-- formulaire pour nouvelle chaussure -->
-            <div ng-controller="addShoesCrtl">
+            <div ng-controller="addShoesCrtl" class="">
 
-                <ul>
-                    <li ng-repeat="x in myData">
-                      {{x.description+":"+x.prix}}
-                    </li>
-                </ul>
+                <div class="row my-3 d-flex justify-content-center">
 
-                <h1>Poster Chaussure</h1>
+                    <article  ng-repeat="x in myData" class="col-10 col-sm-4 col-md-3 col-xl-2 border m-2 p-2">
+                        <figure class="d-flex justify-content-center">
+                            <img src={{x.img}}>
+                        </figure>
+                        <div class="nom_article">{{x.nom}}</div>
+                        <div class="nom_article">{{x.description}}</div>
+                        <div class="priorite_article">Demande la Plus Basse</div>
+                        <div class="prix_article">{{x.prix}} €</div>
+                    </article>
 
-                description : <input ng-model="description" /><br/><br/>
-            
-                prix : <input ng-model="prix" /><br/><br/>
-                               
-                <input type="button" value="Send" ng-click="postdata(description,prix)" /> <br/><br/>
+                </div>
+
+                <div class="container d-flex flex-column col-8 border my-3 p-3 align-items-center">
+                    <div>Soumettre une Chaussure</div>
+
+                    <div class="d-flex flex-column align-items-end">
+
+                        <div class="d-flex p-2">
+                            <span class="my-1">nom :</span>
+                            <input class="m-1" ng-model="nom" />
+                        </div>
+
+                        <div class="d-flex p-2">
+                            <span class="my-1">prix :</span>
+                            <input class="m-1" ng-model="prix" />
+                        </div>
+
+                        <div class="d-flex p-2">
+                            <span class="my-1">description :</span>
+                            <input class="m-1" ng-model="description" />
+                        </div>
+
+                        <div class="d-flex p-2">
+                            <span class="my-1">image :</span>
+                            <input class="m-1" ng-model="image" />
+                        </div>
+
+
+                    </div>
+
+                    <input type="button" value="Soumettre" ng-click="postdata(nom,prix,description,image)" />
+
+                </div>
 
             </div>
 
@@ -58,3 +90,4 @@
     <script src="./shoesController.js"></script>
 </body>
 </html>
+

@@ -1,0 +1,32 @@
+
+
+@font-face {
+    font-family: "Suisselntl Bold";
+    src: url(./fonts/SuisseIntl-Bold-WebM.woff2) format("woff2");
+    
+}
+
+@font-face {
+    font-family: "Suisselntl Medium";
+    src: url(./fonts/SuisseIntl-Medium-WebM.woff2) format("woff2");}
+
+@font-face {
+    font-family: "Suisselntl Regular";
+    src: url(./fonts/SuisseIntl-Regular-WebM.woff2) format("woff2");}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Suisselntl Regular";
+    font-size: 12px;
+}
+
+img{
+    width: 200px;
+    height: 100px;
+    object-fit: contain;
+}
+
+

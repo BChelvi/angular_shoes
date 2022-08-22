@@ -5,10 +5,12 @@ $db = Db::singleton();
 
 $params =json_decode(file_get_contents('php://input'),true);
 
-print_r($params);
+
 
 
 $description = $params["description"];
 $prix = $params["prix"];
+$name = $params["nom"];
+$img = $params["image"];
 
-$db -> create("shoes",["description","prix"],[$description,$prix]);
+$db -> create("shoes",["nom","img","description","prix"],[$name,$img,$description,$prix]);
